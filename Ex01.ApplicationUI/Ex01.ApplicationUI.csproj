@@ -36,7 +36,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DefaultHeightFormDesigner.cs" />
+    <Compile Include="DefaultFormDesigner.cs" />
     <Compile Include="HeightFormDesigner.cs" />
     <Compile Include="CheckinProxy.cs" />
     <Compile Include="FormDesigner.cs" />

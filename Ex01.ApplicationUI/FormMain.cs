@@ -261,20 +261,22 @@ namespace Ex01.ApplicationUI
 
         private void f_ButtonUIMix_Click(object sender, EventArgs e)
         {
-
-            FormDesigner = new MixFormDesigner() { Form = this };
-            FormDesigner.design();
+            acceptVisitor(new MixFormDesigner() { Form = this });
         }
 
         private void f_ButtonUIYellow_Click(object sender, EventArgs e)
         {
-            FormDesigner = new YellowFormDesigner() { Form = this };
-            FormDesigner.design();
+            acceptVisitor(new YellowFormDesigner() { Form = this });
         }
 
         private void f_ButtonFedaultUiHeight_Click(object sender, EventArgs e)
         {
-            FormDesigner = new DefaultHeightFormDesigner() { Form = this };
+            acceptVisitor(new DefaultFormDesigner() { Form = this });
+        }
+
+        private void acceptVisitor(FormDesigner i_FormDesigner)
+        {
+            FormDesigner = i_FormDesigner;
             FormDesigner.design();
         }
     }

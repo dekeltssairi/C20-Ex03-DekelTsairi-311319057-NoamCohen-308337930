@@ -2,10 +2,8 @@
 
 namespace Ex01.ApplicationUI
 {
-    internal class DefaultHeightFormDesigner : FormDesigner
+    internal class DefaultFormDesigner : FormDesigner
     {
-      
-
         public override void design()
         {
             defualt();

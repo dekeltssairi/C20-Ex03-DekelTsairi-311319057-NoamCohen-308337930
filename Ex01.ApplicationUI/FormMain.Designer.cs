@@ -45,7 +45,8 @@
             this.nameLabel1 = new System.Windows.Forms.Label();
             this.f_ButtonLogin = new System.Windows.Forms.Button();
             this.f_CheckBoxRememberMe = new System.Windows.Forms.CheckBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.f_ButtonFedaultUiHeight = new System.Windows.Forms.Button();
             this.f_ButtonUIHeight = new System.Windows.Forms.Button();
             this.f_ButtonUIYellow = new System.Windows.Forms.Button();
             this.f_ButtonUIMix = new System.Windows.Forms.Button();
@@ -88,7 +89,8 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.userBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.f_ButtonFedaultUiHeight = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             aboutLabel = new System.Windows.Forms.Label();
             birthdayLabel = new System.Windows.Forms.Label();
             emailLabel = new System.Windows.Forms.Label();
@@ -100,7 +102,6 @@
             this.f_PanelProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageLargePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -108,6 +109,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.eventBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingNavigator)).BeginInit();
             this.userBindingNavigator.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // aboutLabel
@@ -167,19 +170,12 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.SteelBlue;
-            this.splitContainer1.Panel2.Controls.Add(this.panel1);
+            this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel2);
+            this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer1.Panel2.Controls.Add(this.f_LoadingCircleShowMostDiggingFriend);
-            this.splitContainer1.Panel2.Controls.Add(this.f_LoadingCircleShowEvents);
-            this.splitContainer1.Panel2.Controls.Add(this.f_LoadingCircleShowMyAlbums);
-            this.splitContainer1.Panel2.Controls.Add(this.f_LoadingCircleShowLikes);
-            this.splitContainer1.Panel2.Controls.Add(this.f_LoadingCircleShowCheckins);
-            this.splitContainer1.Panel2.Controls.Add(this.f_LoadingCircleShowFriend);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox4);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Panel2.Controls.Add(this.f_ButtonShowMyEvents);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox2);
-            this.splitContainer1.Panel2.Controls.Add(this.f_ButtonMyAlbums);
-            this.splitContainer1.Panel2.Controls.Add(this.f_ButtonShowLikes);
             this.splitContainer1.Panel2.Controls.Add(this.f_ButtonShowMyPosts);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox3);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
@@ -188,8 +184,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.f_lastPostStaus);
             this.splitContainer1.Panel2.Controls.Add(this.f_ButtonShowMostDiggingFriend);
             this.splitContainer1.Panel2.Controls.Add(this.f_ButtonCovid19);
-            this.splitContainer1.Panel2.Controls.Add(this.f_ButtonShowChekins);
-            this.splitContainer1.Panel2.Controls.Add(this.f_ButtonShowFriends);
             this.splitContainer1.Panel2.Controls.Add(this.f_ButtonPost);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -290,47 +284,57 @@
             this.f_CheckBoxRememberMe.UseVisualStyleBackColor = true;
             this.f_CheckBoxRememberMe.Visible = false;
             // 
-            // panel1
+            // label3
             // 
-            this.panel1.Controls.Add(this.f_ButtonFedaultUiHeight);
-            this.panel1.Controls.Add(this.f_ButtonUIHeight);
-            this.panel1.Controls.Add(this.f_ButtonUIYellow);
-            this.panel1.Controls.Add(this.f_ButtonUIMix);
-            this.panel1.Location = new System.Drawing.Point(888, 96);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(185, 214);
-            this.panel1.TabIndex = 110;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 26);
+            this.label3.TabIndex = 111;
+            this.label3.Text = "Themes";
+            // 
+            // f_ButtonFedaultUiHeight
+            // 
+            this.f_ButtonFedaultUiHeight.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.f_ButtonFedaultUiHeight.Location = new System.Drawing.Point(3, 29);
+            this.f_ButtonFedaultUiHeight.Name = "f_ButtonFedaultUiHeight";
+            this.f_ButtonFedaultUiHeight.Size = new System.Drawing.Size(150, 25);
+            this.f_ButtonFedaultUiHeight.TabIndex = 110;
+            this.f_ButtonFedaultUiHeight.Text = "Default";
+            this.f_ButtonFedaultUiHeight.UseVisualStyleBackColor = true;
+            this.f_ButtonFedaultUiHeight.Click += new System.EventHandler(this.f_ButtonFedaultUiHeight_Click);
             // 
             // f_ButtonUIHeight
             // 
             this.f_ButtonUIHeight.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.f_ButtonUIHeight.Location = new System.Drawing.Point(23, 65);
+            this.f_ButtonUIHeight.Location = new System.Drawing.Point(3, 122);
             this.f_ButtonUIHeight.Name = "f_ButtonUIHeight";
             this.f_ButtonUIHeight.Size = new System.Drawing.Size(150, 25);
             this.f_ButtonUIHeight.TabIndex = 109;
-            this.f_ButtonUIHeight.Text = "UI Height";
+            this.f_ButtonUIHeight.Text = "Buttons Height";
             this.f_ButtonUIHeight.UseVisualStyleBackColor = true;
             this.f_ButtonUIHeight.Click += new System.EventHandler(this.f_ButtonUIHeight_Click);
             // 
             // f_ButtonUIYellow
             // 
             this.f_ButtonUIYellow.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.f_ButtonUIYellow.Location = new System.Drawing.Point(23, 159);
+            this.f_ButtonUIYellow.Location = new System.Drawing.Point(3, 91);
             this.f_ButtonUIYellow.Name = "f_ButtonUIYellow";
             this.f_ButtonUIYellow.Size = new System.Drawing.Size(150, 25);
             this.f_ButtonUIYellow.TabIndex = 107;
-            this.f_ButtonUIYellow.Text = "UI Yellow";
+            this.f_ButtonUIYellow.Text = "Yellow";
             this.f_ButtonUIYellow.UseVisualStyleBackColor = true;
             this.f_ButtonUIYellow.Click += new System.EventHandler(this.f_ButtonUIYellow_Click);
             // 
             // f_ButtonUIMix
             // 
             this.f_ButtonUIMix.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.f_ButtonUIMix.Location = new System.Drawing.Point(23, 112);
+            this.f_ButtonUIMix.Location = new System.Drawing.Point(3, 60);
             this.f_ButtonUIMix.Name = "f_ButtonUIMix";
             this.f_ButtonUIMix.Size = new System.Drawing.Size(150, 25);
             this.f_ButtonUIMix.TabIndex = 108;
-            this.f_ButtonUIMix.Text = "mix";
+            this.f_ButtonUIMix.Text = "MIX";
             this.f_ButtonUIMix.UseVisualStyleBackColor = true;
             this.f_ButtonUIMix.Click += new System.EventHandler(this.f_ButtonUIMix_Click);
             // 
@@ -356,7 +360,7 @@
             this.f_LoadingCircleShowEvents.Active = false;
             this.f_LoadingCircleShowEvents.Color = System.Drawing.Color.DarkGray;
             this.f_LoadingCircleShowEvents.InnerCircleRadius = 5;
-            this.f_LoadingCircleShowEvents.Location = new System.Drawing.Point(763, 558);
+            this.f_LoadingCircleShowEvents.Location = new System.Drawing.Point(209, 139);
             this.f_LoadingCircleShowEvents.Name = "f_LoadingCircleShowEvents";
             this.f_LoadingCircleShowEvents.NumberSpoke = 12;
             this.f_LoadingCircleShowEvents.OuterCircleRadius = 11;
@@ -373,7 +377,7 @@
             this.f_LoadingCircleShowMyAlbums.Active = false;
             this.f_LoadingCircleShowMyAlbums.Color = System.Drawing.Color.DarkGray;
             this.f_LoadingCircleShowMyAlbums.InnerCircleRadius = 5;
-            this.f_LoadingCircleShowMyAlbums.Location = new System.Drawing.Point(763, 503);
+            this.f_LoadingCircleShowMyAlbums.Location = new System.Drawing.Point(209, 104);
             this.f_LoadingCircleShowMyAlbums.Name = "f_LoadingCircleShowMyAlbums";
             this.f_LoadingCircleShowMyAlbums.NumberSpoke = 12;
             this.f_LoadingCircleShowMyAlbums.OuterCircleRadius = 11;
@@ -390,7 +394,7 @@
             this.f_LoadingCircleShowLikes.Active = false;
             this.f_LoadingCircleShowLikes.Color = System.Drawing.Color.DarkGray;
             this.f_LoadingCircleShowLikes.InnerCircleRadius = 5;
-            this.f_LoadingCircleShowLikes.Location = new System.Drawing.Point(763, 439);
+            this.f_LoadingCircleShowLikes.Location = new System.Drawing.Point(209, 69);
             this.f_LoadingCircleShowLikes.Name = "f_LoadingCircleShowLikes";
             this.f_LoadingCircleShowLikes.NumberSpoke = 12;
             this.f_LoadingCircleShowLikes.OuterCircleRadius = 11;
@@ -407,7 +411,7 @@
             this.f_LoadingCircleShowCheckins.Active = false;
             this.f_LoadingCircleShowCheckins.Color = System.Drawing.Color.DarkGray;
             this.f_LoadingCircleShowCheckins.InnerCircleRadius = 5;
-            this.f_LoadingCircleShowCheckins.Location = new System.Drawing.Point(763, 393);
+            this.f_LoadingCircleShowCheckins.Location = new System.Drawing.Point(209, 34);
             this.f_LoadingCircleShowCheckins.Name = "f_LoadingCircleShowCheckins";
             this.f_LoadingCircleShowCheckins.NumberSpoke = 12;
             this.f_LoadingCircleShowCheckins.OuterCircleRadius = 11;
@@ -424,7 +428,7 @@
             this.f_LoadingCircleShowFriend.Active = false;
             this.f_LoadingCircleShowFriend.Color = System.Drawing.Color.DarkGray;
             this.f_LoadingCircleShowFriend.InnerCircleRadius = 5;
-            this.f_LoadingCircleShowFriend.Location = new System.Drawing.Point(763, 345);
+            this.f_LoadingCircleShowFriend.Location = new System.Drawing.Point(209, 3);
             this.f_LoadingCircleShowFriend.Name = "f_LoadingCircleShowFriend";
             this.f_LoadingCircleShowFriend.NumberSpoke = 12;
             this.f_LoadingCircleShowFriend.OuterCircleRadius = 11;
@@ -459,7 +463,7 @@
             // 
             this.f_ButtonShowMyEvents.Enabled = false;
             this.f_ButtonShowMyEvents.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.f_ButtonShowMyEvents.Location = new System.Drawing.Point(835, 558);
+            this.f_ButtonShowMyEvents.Location = new System.Drawing.Point(3, 139);
             this.f_ButtonShowMyEvents.Name = "f_ButtonShowMyEvents";
             this.f_ButtonShowMyEvents.Size = new System.Drawing.Size(200, 25);
             this.f_ButtonShowMyEvents.TabIndex = 92;
@@ -480,7 +484,7 @@
             // 
             this.f_ButtonMyAlbums.Enabled = false;
             this.f_ButtonMyAlbums.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.f_ButtonMyAlbums.Location = new System.Drawing.Point(835, 503);
+            this.f_ButtonMyAlbums.Location = new System.Drawing.Point(3, 104);
             this.f_ButtonMyAlbums.Name = "f_ButtonMyAlbums";
             this.f_ButtonMyAlbums.Size = new System.Drawing.Size(200, 25);
             this.f_ButtonMyAlbums.TabIndex = 94;
@@ -492,7 +496,7 @@
             // 
             this.f_ButtonShowLikes.Enabled = false;
             this.f_ButtonShowLikes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.f_ButtonShowLikes.Location = new System.Drawing.Point(835, 448);
+            this.f_ButtonShowLikes.Location = new System.Drawing.Point(3, 69);
             this.f_ButtonShowLikes.Name = "f_ButtonShowLikes";
             this.f_ButtonShowLikes.Size = new System.Drawing.Size(200, 25);
             this.f_ButtonShowLikes.TabIndex = 98;
@@ -543,6 +547,7 @@
             // 
             // f_ListBoxPosts
             // 
+            this.f_ListBoxPosts.BackColor = System.Drawing.Color.SteelBlue;
             this.f_ListBoxPosts.FormattingEnabled = true;
             this.f_ListBoxPosts.HorizontalScrollbar = true;
             this.f_ListBoxPosts.ItemHeight = 16;
@@ -553,6 +558,7 @@
             // 
             // f_lastPostStaus
             // 
+            this.f_lastPostStaus.BackColor = System.Drawing.Color.SteelBlue;
             this.f_lastPostStaus.Location = new System.Drawing.Point(50, 226);
             this.f_lastPostStaus.Multiline = true;
             this.f_lastPostStaus.Name = "f_lastPostStaus";
@@ -589,7 +595,7 @@
             this.f_ButtonShowChekins.CausesValidation = false;
             this.f_ButtonShowChekins.Enabled = false;
             this.f_ButtonShowChekins.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.f_ButtonShowChekins.Location = new System.Drawing.Point(835, 393);
+            this.f_ButtonShowChekins.Location = new System.Drawing.Point(3, 34);
             this.f_ButtonShowChekins.Name = "f_ButtonShowChekins";
             this.f_ButtonShowChekins.Size = new System.Drawing.Size(200, 25);
             this.f_ButtonShowChekins.TabIndex = 88;
@@ -601,7 +607,7 @@
             // 
             this.f_ButtonShowFriends.Enabled = false;
             this.f_ButtonShowFriends.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.f_ButtonShowFriends.Location = new System.Drawing.Point(835, 333);
+            this.f_ButtonShowFriends.Location = new System.Drawing.Point(3, 3);
             this.f_ButtonShowFriends.Name = "f_ButtonShowFriends";
             this.f_ButtonShowFriends.Size = new System.Drawing.Size(200, 25);
             this.f_ButtonShowFriends.TabIndex = 87;
@@ -637,6 +643,7 @@
             // userBindingNavigator
             // 
             this.userBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.userBindingNavigator.BackColor = System.Drawing.Color.SteelBlue;
             this.userBindingNavigator.BindingSource = this.userBindingSource;
             this.userBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.userBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -717,7 +724,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.BackColor = System.Drawing.Color.SteelBlue;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -760,16 +767,34 @@
             this.userBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.userBindingNavigatorSaveItem.Text = "Save Data";
             // 
-            // f_ButtonFedaultUiHeight
+            // flowLayoutPanel1
             // 
-            this.f_ButtonFedaultUiHeight.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.f_ButtonFedaultUiHeight.Location = new System.Drawing.Point(23, 12);
-            this.f_ButtonFedaultUiHeight.Name = "f_ButtonFedaultUiHeight";
-            this.f_ButtonFedaultUiHeight.Size = new System.Drawing.Size(150, 25);
-            this.f_ButtonFedaultUiHeight.TabIndex = 110;
-            this.f_ButtonFedaultUiHeight.Text = "Default Height";
-            this.f_ButtonFedaultUiHeight.UseVisualStyleBackColor = true;
-            this.f_ButtonFedaultUiHeight.Click += new System.EventHandler(this.f_ButtonFedaultUiHeight_Click);
+            this.flowLayoutPanel1.Controls.Add(this.label3);
+            this.flowLayoutPanel1.Controls.Add(this.f_ButtonFedaultUiHeight);
+            this.flowLayoutPanel1.Controls.Add(this.f_ButtonUIMix);
+            this.flowLayoutPanel1.Controls.Add(this.f_ButtonUIYellow);
+            this.flowLayoutPanel1.Controls.Add(this.f_ButtonUIHeight);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(909, 113);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(164, 214);
+            this.flowLayoutPanel1.TabIndex = 111;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.f_ButtonShowFriends);
+            this.flowLayoutPanel2.Controls.Add(this.f_LoadingCircleShowFriend);
+            this.flowLayoutPanel2.Controls.Add(this.f_ButtonShowChekins);
+            this.flowLayoutPanel2.Controls.Add(this.f_LoadingCircleShowCheckins);
+            this.flowLayoutPanel2.Controls.Add(this.f_ButtonShowLikes);
+            this.flowLayoutPanel2.Controls.Add(this.f_LoadingCircleShowLikes);
+            this.flowLayoutPanel2.Controls.Add(this.f_ButtonMyAlbums);
+            this.flowLayoutPanel2.Controls.Add(this.f_LoadingCircleShowMyAlbums);
+            this.flowLayoutPanel2.Controls.Add(this.f_ButtonShowMyEvents);
+            this.flowLayoutPanel2.Controls.Add(this.f_LoadingCircleShowEvents);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(780, 333);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(293, 272);
+            this.flowLayoutPanel2.TabIndex = 112;
             // 
             // FormMain
             // 
@@ -792,7 +817,6 @@
             this.f_PanelProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageLargePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -801,6 +825,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.userBindingNavigator)).EndInit();
             this.userBindingNavigator.ResumeLayout(false);
             this.userBindingNavigator.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -860,7 +887,9 @@
         private System.Windows.Forms.Button f_ButtonUIHeight;
         private System.Windows.Forms.Button f_ButtonUIMix;
         private System.Windows.Forms.Button f_ButtonUIYellow;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button f_ButtonFedaultUiHeight;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
     }
 }

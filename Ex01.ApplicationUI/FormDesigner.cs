@@ -14,15 +14,18 @@ namespace Ex01.ApplicationUI
             foreach (Control control in Form.Controls)
             {
                 paintControl(control, Color.SteelBlue);
-                heightControl(control, 25);
+                heightControl(control, 20);
             }
         }
 
         protected void paintControl(Control i_Control, Color i_Color)
         {
             bool notButton = !(i_Control is Button);
+
             if (notButton)
+            {
                 i_Control.BackColor = i_Color;
+            }
 
             foreach (Control control in i_Control.Controls)
             {
